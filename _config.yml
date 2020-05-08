@@ -1,0 +1,22 @@
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "post"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values: "default"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
