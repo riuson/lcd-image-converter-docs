@@ -54,3 +54,15 @@ collections:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "docpage"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

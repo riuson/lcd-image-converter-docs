@@ -1,0 +1,8 @@
+{%- comment -%}
+  Render TOC for include.items filtered by include.filter
+  {%- capture tocString -%}
+  {%- endcapture -%}
+  {{ tocString | strip_newlines }}
+{%- endcomment -%}
+
+{%- include toc_level.html filter=include.filter items=include.items -%}

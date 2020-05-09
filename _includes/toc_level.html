@@ -1,0 +1,23 @@
+{%- comment -%}
+  Render 1 level of TOC for include.items filtered by include.filter
+{%- endcomment -%}
+{%- assign subItemsCount = 0 -%}
+
+{%- for item in include.items -%}
+{%- assign innerLevelsCount = item.url | remove_first: include.filter | split: "/" | compact | size -%}
+{%- if innerLevelsCount == 1 -%}
+{%- assign subItemsCount = subItemsCount | plus: 1 -%}
+{%- endif -%}
+{%- endfor -%}
+
+{%- if subItemsCount >= 1 -%}
+  <ul>
+    {%- for item in include.items -%}
+      {%- assign innerLevelsCount = item.url | remove_first: include.filter | split: "/" | compact | size -%}
+      {%- if innerLevelsCount == 1 -%}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {%- include toc_level.html filter=item.url items=include.items -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
