@@ -1,5 +1,6 @@
 ---
 title: Short Manual
+order: 1
 ---
 Before you begin, you should determine:
 

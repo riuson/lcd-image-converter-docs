@@ -1,5 +1,6 @@
 ---
 title: Templates
+order: 6
 ---
 Template files for image and font.
 

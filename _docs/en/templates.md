@@ -1,5 +1,6 @@
 ---
-title: Temlplates
+title: Templates
+order: 5
 ---
 Conversion from bytes array to "C" source file made with help of template file.
 This file is simple text file with key tags, surrounded with *$(tag)* or *@tag@* .

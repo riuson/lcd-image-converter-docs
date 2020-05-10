@@ -1,5 +1,6 @@
 ---
 title: Font
+order: 5
 ---
 *  Use BOM (Byte Order Mark);
   *  Encoding for characters;

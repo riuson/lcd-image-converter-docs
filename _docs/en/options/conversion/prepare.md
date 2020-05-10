@@ -1,5 +1,6 @@
 ---
 title: Prepare
+order: 1
 ---
 This settings specifies the transformation prior to converting images to text.
 

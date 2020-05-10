@@ -1,5 +1,6 @@
 ---
 title: Reordering bits
+order: 3
 ---
 Reordering of bits in the output data blocks may be needed in some particular cases.
 

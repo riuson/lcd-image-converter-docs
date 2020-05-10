@@ -1,5 +1,6 @@
 ---
 title: Matrix
+order: 2
 ---
 Settings to copy source image bits to output data blocks. Configuration is performed in a table containing the shift operations and a masks.
 

@@ -56,11 +56,13 @@ defaults:
       type: "docs"
     values:
       layout: "docs"
+      order: 1
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "pages"
+      order: 1
 
 languages: "en, ru"
 

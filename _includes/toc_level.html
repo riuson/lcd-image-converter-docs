@@ -12,7 +12,8 @@
 
 {%- if subItemsCount >= 1 -%}
   <ul>
-    {%- for item in include.items -%}
+    {%- assign orderedItems = include.items | sort: 'order' -%}
+    {%- for item in orderedItems -%}
       {%- assign innerLevelsCount = item.url | remove_first: include.filter | split: "/" | compact | size -%}
       {%- if innerLevelsCount == 1 -%}
         {%- if item.url == page.url -%}
