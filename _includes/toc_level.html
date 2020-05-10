@@ -20,7 +20,9 @@
         {%- else -%}
           <li><a href="{{ item.url }}">{{ item.title }}</a></li>
         {%- endif -%}
-        {%- include toc_level.html filter=item.url items=include.items -%}
+        {%- if page.url contains item.url -%}
+          {%- include toc_level.html filter=item.url items=include.items -%}
+        {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
   </ul>
