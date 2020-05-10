@@ -18,8 +18,8 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {%- for link in site.data[current_lang].navigation.languages -%}
-                  <a class="dropdown-item" href="{{ page.url | replace_first: current_lang, link.code }}">
-                    <img src="/assets/images/languages/{{ link.icon }}.svg" height="16" title="{{ link.title }}">
+                  <a class="dropdown-item" href="{{ page.url | replace_first: current_lang, link.code | relative_url }}">
+                    <img src="{{ '/assets/images/languages/' | append: link.icon | append: '.svg' | relative_url }}" height="16" title="{{ link.title }}">
                     {{ link.title | raw }}
                   </a>
                 {%- endfor -%}
