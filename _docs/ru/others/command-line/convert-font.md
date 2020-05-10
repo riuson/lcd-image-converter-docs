@@ -5,7 +5,7 @@ title: Шрифт
 
 Справка по режиму преобразования шрифта:
 
-```
+```bash
 $ ./lcd-image-converter --mode=convert-font --help
 Usage: ./lcd-image-converter [options]
 Tool to create image and font source files for embedded applications.
@@ -40,7 +40,7 @@ Options:
 
 # Пример
 
-```
+```bash
 $ ./lcd-image-converter --mode=convert-font \
     --family=Ubuntu \
     --size=14 \
@@ -54,7 +54,7 @@ $ ./lcd-image-converter --mode=convert-font \
     --background=FFFFFFFF
 ```
 
-```
+```bash
 $ ./lcd-image-converter --mode=convert-font \
     --family=Ubuntu \
     --size=14 \

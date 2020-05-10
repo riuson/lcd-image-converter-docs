@@ -75,7 +75,7 @@ List of used codecs:
 
 [Image template](https://github.com/riuson/lcd-image-converter/blob/master/resources/image.tmpl)
 
-```
+```cpp
 $(start_block_header)
 /*******************************************************************************
 * $(doc_data_type)
@@ -117,7 +117,7 @@ $(end_block_images_table)
 
 [Font template](https://github.com/riuson/lcd-image-converter/blob/master/resources/font.tmpl)
 
-```
+```cpp
 $(start_block_header)
 /*******************************************************************************
 * $(doc_data_type)

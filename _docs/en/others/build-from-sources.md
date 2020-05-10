@@ -3,7 +3,7 @@ title: Build
 ---
 Clone repository:
 
-```
+```bash
 git clone https://github.com/riuson/lcd-image-converter.git
 ```
 
@@ -15,7 +15,7 @@ Qt Creator:
 
 Console:
 
-```
+```bash
 cd lcd-image-converter
 qmake
 make
@@ -24,7 +24,7 @@ make
 ```
 
 Ubuntu 19.04:
-```
+```bash
 user@vmachine:~$ lsb_release -a
 No LSB modules are available.
 Distributor ID: Ubuntu
@@ -41,7 +41,7 @@ user@vmachine:~/lic$
 
 Output example:
 
-```
+```bash
 user@desktop:~/workspace/lcd-image-converter (git: develop)
 ➜ qmake
 RCC: Error in 'resources/resources.qrc': Cannot find file 'lcd-image-converter-ru.qm'

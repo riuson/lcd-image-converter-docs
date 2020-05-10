@@ -5,7 +5,7 @@ title: HEX to BIN
 
 Help for hex to bin conversion mode:
 
-```
+```bash
 $ ./lcd-image-converter --mode=hex2bin --help
 Usage: ./lcd-image-converter [options]
 Tool to create image and font source files for embedded applications.
@@ -29,7 +29,7 @@ Settings:
 
 Template file for image:
 
-```
+```cpp
 $(start_block_images_table)
 le
 uint16 $(out_image_width)
@@ -45,7 +45,7 @@ le, be - little endian and big endian.
 
 # Example
 
-```
+```bash
 $ ./lcd-image-converter --mode=hex2bin \
     --input=/temp/colors.c \
     --output=/temp/colors.bin
@@ -53,7 +53,7 @@ $ ./lcd-image-converter --mode=hex2bin \
 
 "C" file after conversion to sources:
 
-```
+```cpp
 static const uint8_t image_data_colors[10] = {
     0xd0, 
     0xf0, 
@@ -71,7 +71,7 @@ const tImage colors = { image_data_colors, 10, 5};
 
 With modified template:
 
-```
+```cpp
 le
 uint16 10
 uint16 5

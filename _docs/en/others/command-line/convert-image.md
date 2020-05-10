@@ -5,7 +5,7 @@ title: Image
 
 Help for image conversion mode:
 
-```
+```bash
 $ ./lcd-image-converter --mode=convert-image --help
 Usage: ./lcd-image-converter [options]
 Tool to create image and font source files for embedded applications.
@@ -30,7 +30,7 @@ If option --template was omitted, application will use the template file specifi
 
 # Example
 
-```
+```bash
 $ ./lcd-image-converter --mode=convert-image \
     --doc-name=test \
     --preset-name=Monochrome \

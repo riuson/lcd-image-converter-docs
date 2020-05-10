@@ -28,7 +28,7 @@ Parameters for conversion of single image.
   *  Level's replacement *[pr]*.
 
 Fragment of the output code:
-```
+```cpp
 ...
 
 #if (0x0 == 0x0)

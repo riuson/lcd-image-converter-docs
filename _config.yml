@@ -24,8 +24,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
-#theme: minima
-#theme: jekyll-whiteglass
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  # styles for rogue: https://spsarolkar.github.io/rouge-theme-preview/ , https://github.com/spsarolkar/rouge-theme-preview
+
 plugins:
   - jekyll-sitemap
   - jekyll-redirect-from

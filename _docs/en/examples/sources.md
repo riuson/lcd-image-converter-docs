@@ -3,23 +3,20 @@ title: Source codes
 ---
 Types definition.
 
-```
-typedef struct
-{
+```cpp
+typedef struct {
     const unsigned char *data;
     uint16_t width;
     uint16_t height;
     uint8_t  dataSize;
 } tImage;
 
-typedef struct
-{
+typedef struct {
     long int code;
     const tImage *image;
 } tChar;
 
-typedef struct
-{
+typedef struct {
     int length;
     const tChar *chars;
 } tFont;
@@ -27,16 +24,13 @@ typedef struct
 
 Set pixel on the display.
 
-```
+```cpp
 void set_pixel(int x, int y, int color)
 {
-    if (color != 0)
-    {
+    if (color != 0) {
         // set pixel
         ...
-    }
-    else
-    {
+    } else {
         // reset pixel
         ...
     }
@@ -45,7 +39,7 @@ void set_pixel(int x, int y, int color)
 
 Draw image on the display.
 
-```
+```cpp
 void draw_bitmap_mono(int x, int y, const tImage *image)
 {
     uint8_t value = 0;
@@ -53,24 +47,23 @@ void draw_bitmap_mono(int x, int y, const tImage *image)
     int counter = 0;
     const uint8_t *pdata = (const uint8_t *) image->data;
     // rows
-    for (y0 = 0; y0 < image->height; y0++)
-    {
+    for (y0 = 0; y0 < image->height; y0++) {
         // columns
-        for (x0 = 0; x0 < image->width; x0++)
-        {
+        for (x0 = 0; x0 < image->width; x0++) {
             // load new data
-            if (counter == 0)
-            {
+            if (counter == 0) {
                 value = *pdata++;
                 counter = image->dataSize;
             }
+
             counter--;
 
             // set pixel
-            if ((value & 0x80) != 0)
+            if ((value & 0x80) != 0) {
                 set_pixel(x + x0, y + y0, 1);
-            else
+            } else {
                 set_pixel(x + x0, y + y0, 0);
+            }
 
             value = value << 1;
         }
@@ -80,7 +73,7 @@ void draw_bitmap_mono(int x, int y, const tImage *image)
 
 Draw image on the display (RLE).
 
-```
+```cpp
 void draw_bitmap_mono_rle(int x, int y, const tImage *image)
 {
     uint8_t value = 0;
@@ -90,47 +83,45 @@ void draw_bitmap_mono_rle(int x, int y, const tImage *image)
     int8_t nonsequence = 0;
     const uint8_t *pdata = (const uint8_t *) image->data;
     // rows
-    for (y0 = 0; y0 < image->height && (y0 + y) < 320; y0++)
-    {
+    for (y0 = 0; y0 < image->height && (y0 + y) < 320; y0++) {
         // columns
-        for (x0 = 0; x0 < image->width; x0++)
-        {
+        for (x0 = 0; x0 < image->width; x0++) {
             // load new data
-            if (counter == 0)
-            {
-                if ((sequence == 0) && (nonsequence == 0))
-                {
+            if (counter == 0) {
+                if ((sequence == 0) && (nonsequence == 0)) {
                     sequence = *pdata++;
-                    if (sequence < 0)
-                    {
+
+                    if (sequence < 0) {
                         nonsequence = -sequence;
                         sequence = 0;
                     }
                 }
-                if (sequence > 0)
-                {
-                    value = *pdata;
 
+                if (sequence > 0) {
+                    value = *pdata;
                     sequence--;
 
-                    if (sequence == 0)
+                    if (sequence == 0) {
                         pdata++;
+                    }
                 }
-                if (nonsequence > 0)
-                {
-                    value = *pdata++;
 
+                if (nonsequence > 0) {
+                    value = *pdata++;
                     nonsequence--;
                 }
+
                 counter = image->dataSize;
             }
+
             counter--;
 
             // set pixel
-            if ((value & 0x80) != 0)
+            if ((value & 0x80) != 0) {
                 set_pixel(x + x0, y + y0, 1);
-            else
+            } else {
                 set_pixel(x + x0, y + y0, 0);
+            }
 
             value = value << 1;
         }
@@ -140,7 +131,7 @@ void draw_bitmap_mono_rle(int x, int y, const tImage *image)
 
 Get character's data from font by its code.
 
-```
+```cpp
 const tChar *find_char_by_code(int code, const tFont *font)
 {
     int count = font->length;
@@ -148,25 +139,25 @@ const tChar *find_char_by_code(int code, const tFont *font)
     int last = count - 1;
     int mid = 0;
 
-    if (count > 0)
-    {
-        if ((code >= font->chars[0].code) && (code <= font->chars[count - 1].code))
-        {
-            while (last >= first)
-            {
+    if (count > 0) {
+        if ((code >= font->chars[0].code) && (code <= font->chars[count - 1].code)) {
+            while (last >= first) {
                 mid = first + ((last - first) / 2);
 
-                if (font->chars[mid].code < code)
+                if (font->chars[mid].code < code) {
                     first = mid + 1;
-                else
-                    if (font->chars[mid].code > code)
+                } else {
+                    if (font->chars[mid].code > code) {
                         last = mid - 1;
-                    else
+                    } else {
                         break;
+                    }
+                }
             }
 
-            if (font->chars[mid].code == code)
+            if (font->chars[mid].code == code) {
                 return (&font->chars[mid]);
+            }
         }
     }
 
@@ -178,15 +169,14 @@ Get UTF-8 code for next character in string.
 
 *Don't use this code for other encodings (like 1-byte).*
 
-```
+```cpp
 int utf8_next_char(const char *str, int start, int *resultCode, int *nextIndex)
 {
     int len = 0;
     int index = 0;
     *resultCode = 0;
 
-    while (*(str + index) != 0)
-    {
+    while (*(str + index) != 0) {
         len++;
         index++;
     }
@@ -199,33 +189,27 @@ int utf8_next_char(const char *str, int start, int *resultCode, int *nextIndex)
     *resultCode = 0;
     *nextIndex = -1;
 
-    if (start >= 0 && start < len)
-    {
+    if (start >= 0 && start < len) {
         index = start;
 
-        while (index < len)
-        {
+        while (index < len) {
             c = *(str + index);
             index++;
 
             // msb
-            if (skip == 0)
-            {
+            if (skip == 0) {
                 // if range 0x00010000-0x001fffff
-                if ((c & 0xf8) == 0xf0)
-                {
+                if ((c & 0xf8) == 0xf0) {
                     skip = 3;
                     code = c;
                 }
                 // if range 0x00000800-0x0000ffff
-                else if ((c & 0xf0) == 0xe0)
-                {
+                else if ((c & 0xf0) == 0xe0) {
                     skip = 2;
                     code = c;
                 }
                 // if range 0x00000080-0x000007ff
-                else if ((c & 0xe0) == 0xc0)
-                {
+                else if ((c & 0xe0) == 0xc0) {
                     skip = 1;
                     code = c;
                 }
@@ -235,15 +219,13 @@ int utf8_next_char(const char *str, int start, int *resultCode, int *nextIndex)
                     skip = 0;
                     code = c;
                 }
-            }
-            else // not msb
-            {
+            } else {// not msb
                 code = code << 8;
                 code |= c;
                 skip--;
             }
-            if (skip == 0)
-            {
+
+            if (skip == 0) {
                 // completed
                 *resultCode = code;
                 *nextIndex = index;
@@ -252,13 +234,14 @@ int utf8_next_char(const char *str, int start, int *resultCode, int *nextIndex)
             }
         }
     }
+
     return (result);
 }
 ```
 
 Draw text.
 
-```
+```cpp
 void draw_string(const char *str, int x, int y, const tFont *font)
 {
     int len = ustrlen(str);
@@ -266,20 +249,22 @@ void draw_string(const char *str, int x, int y, const tFont *font)
     int code = 0;
     int x1 = x;
     int nextIndex;
-    while (index < len)
-    {
-        if (utf8_next_char(str, index, &code, &nextIndex) != 0)
-        {
+
+    while (index < len) {
+        if (utf8_next_char(str, index, &code, &nextIndex) != 0) {
             const tChar *ch = find_char_by_code(code, font);
-            if (ch != 0)
-            {
+            
+            if (ch != 0) {
                 draw_bitmap_mono(x1, y, ch->image);
                 x1 += ch->image->width;
             }
         }
+
         index = nextIndex;
-        if (nextIndex < 0)
+
+        if (nextIndex < 0) {
             break;
+        }
     }
 }
 ```

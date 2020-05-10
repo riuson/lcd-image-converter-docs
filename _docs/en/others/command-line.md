@@ -12,7 +12,7 @@ In this mode, a document's conversion can be performed without using of GUI, but
 
 Calling basic help:
 
-```
+```bash
 $ ./lcd-image-converter --help
 Usage: ./lcd-image-converter [options]
 Tool to create image and font source files for embedded applications.

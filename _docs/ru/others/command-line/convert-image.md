@@ -5,7 +5,7 @@ title: Изображение
 
 Справка по режиму преобразования изображений:
 
-```
+```bash
 $ ./lcd-image-converter --mode=convert-image --help
 Usage: ./lcd-image-converter [options]
 Tool to create image and font source files for embedded applications.
@@ -30,7 +30,7 @@ Options:
 
 # Пример
 
-```
+```bash
 $ ./lcd-image-converter --mode=convert-image \
     --doc-name=test \
     --preset-name=Monochrome \
