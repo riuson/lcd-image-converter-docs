@@ -27,21 +27,19 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 #theme: minima
-theme: jekyll-whiteglass
+#theme: jekyll-whiteglass
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
-
-permalink: /:year/:month/:day/:title/
-paginate_path: /posts/:num/
-paginate: 5
 
 collections:
   docs:
     output: true
   pages:
     output: true
+
+permalink: /:year/:month/:day/:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -60,9 +58,9 @@ defaults:
       path: ""
       type: "docs"
     values:
-      layout: "docpage"
+      layout: "docs"
   - scope:
       path: ""
       type: "pages"
     values:
-      layout: "page"
+      layout: "pages"

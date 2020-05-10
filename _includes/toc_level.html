@@ -15,7 +15,11 @@
     {%- for item in include.items -%}
       {%- assign innerLevelsCount = item.url | remove_first: include.filter | split: "/" | compact | size -%}
       {%- if innerLevelsCount == 1 -%}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {%- if item.url == page.url -%}
+          <li><a href="{{ item.url }}" class="current-page">{{ item.title }}</a></li>
+        {%- else -%}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {%- endif -%}
         {%- include toc_level.html filter=item.url items=include.items -%}
       {%- endif -%}
     {%- endfor -%}
