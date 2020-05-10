@@ -64,5 +64,5 @@ defaults:
 
 languages: "en, ru"
 
-url: https://riuson.github.io/
-baseurl: /lcd-image-converter-docs
+url: https://lcd-image-converter.riuson.com/
+baseurl: /
