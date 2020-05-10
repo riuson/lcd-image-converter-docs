@@ -4,7 +4,7 @@ main:
   - title: "<span class='fa fa-info'></span>&nbsp;О проекте"
     url: "/pages/current_lang/about/"
   - title: "<span class='fa fa-book'></span>&nbsp;Документация"
-    url: "/pages/current_lang/docs"
+    url: "/docs/current_lang/short-manual"
   - title: "<span class='fa fa-download'></span>&nbsp;Загрузки"
     url: https://sourceforge.net/projects/lcd-image-converter/
   - title: "<span class='fab fa-github'></span>&nbsp;GitHub"
