@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: "Docs"
-permalink: /docs/
+title: "Документация"
 ---
 
 {% comment %}
