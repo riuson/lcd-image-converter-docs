@@ -7,7 +7,7 @@ main:
     url: "/pages/current_lang/docs"
   - title: "<span class='fa fa-download'></span>&nbsp;Загрузки"
     url: https://sourceforge.net/projects/lcd-image-converter/
-  - title: "<span class='fa fa-github'></span>&nbsp;GitHub"
+  - title: "<span class='fab fa-github'></span>&nbsp;GitHub"
     url: https://github.com/riuson/lcd-image-converter
 
 additional:
