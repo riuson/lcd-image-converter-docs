@@ -8,11 +8,11 @@ Settings to copy source image bits to output data blocks.
 Prepare source image data. Each pixel of image converted to integer value, equals to RGB.
 
   *  For monochrome type all bits of this value sets to 1 or 0.
-  ![Source data](/assets/images/options/conversion/matrix/algorithm-1.png "Source data"){:class="img-fluid"}
+  ![Source data]({{ '/assets/images/options/conversion/matrix/algorithm-1.png' | relative_url }} "Source data"){:class="img-fluid"}
   *  For grayscale, "gray value" calculated by [qGray](http://qt-project.org/doc/qt-4.8/qcolor.html#qGray-2), and each field R, G, B replaced by "gray value".
-  ![Source data](/assets/images/options/conversion/matrix/algorithm-2.png "Source data"){:class="img-fluid"}
+  ![Source data]({{ '/assets/images/options/conversion/matrix/algorithm-2.png' | relative_url }} "Source data"){:class="img-fluid"}
   *  Color image stays unchanged.
-  ![Source data](/assets/images/options/conversion/matrix/algorithm-3.png "Source data"){:class="img-fluid"}
+  ![Source data]({{ '/assets/images/options/conversion/matrix/algorithm-3.png' | relative_url }} "Source data"){:class="img-fluid"}
 
 As result we have data array, what later processed by masks.
 
@@ -27,7 +27,7 @@ As finished, output value is combined with 2 masks:
   *  First, mask «AND», allows reset specified bits to 0;
   *  Second, «OR», allows set specified bits to 1.
 
-!['Shift' operation](/assets/images/options/conversion/matrix/algorithm-4.png "'Shift' operation"){:class="img-fluid"}
+!['Shift' operation]({{ '/assets/images/options/conversion/matrix/algorithm-4.png' | relative_url }} "'Shift' operation"){:class="img-fluid"}
 
 # Step 3
 
@@ -35,7 +35,7 @@ Building bit stream from data array, to pack its to data blocks later. After pro
 
 *Note: mask "Used" cannot be empty, at least one bit must be set.*
 
-![Bitstream](/assets/images/options/conversion/matrix/algorithm-5.png "Bitstream"){:class="img-fluid"}
+![Bitstream]({{ '/assets/images/options/conversion/matrix/algorithm-5.png' | relative_url }} "Bitstream"){:class="img-fluid"}
 
 # Step 4
 
@@ -54,9 +54,9 @@ Then process the bit stream through the mask to fill the output blocks by bits o
 
 *Note: "Fill" mask can't be empty (0x00000000), because this produces infinity loop of packing.*
 
-![Packing](/assets/images/options/conversion/matrix/algorithm-6.png "Packing"){:class="img-fluid"}
+![Packing]({{ '/assets/images/options/conversion/matrix/algorithm-6.png' | relative_url }} "Packing"){:class="img-fluid"}
 
-![Animation](/assets/images/options/conversion/matrix/algorithm-6.gif){:class="img-fluid"}
+![Animation]({{ '/assets/images/options/conversion/matrix/algorithm-6.gif' | relative_url }}){:class="img-fluid"}
 
 # Step 5
 

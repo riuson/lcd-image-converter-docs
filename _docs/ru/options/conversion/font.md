@@ -6,4 +6,4 @@ title: Шрифт
   *  Сортировать символы по коду.
 
 
-![Диалог настроек шрифта](/assets/images/options/conversion/font-1.png "Диалог настроек шрифта"){:class="img-fluid"}
+![Диалог настроек шрифта]({{ '/assets/images/options/conversion/font-1.png' | relative_url }} "Диалог настроек шрифта"){:class="img-fluid"}

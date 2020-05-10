@@ -3,7 +3,7 @@ title: Image
 ---
 Parameters for conversion of single image.
 
-![Image dialog](/assets/images/options/conversion/image-1.png "Image dialog"){:class="img-fluid"}
+![Image dialog]({{ '/assets/images/options/conversion/image-1.png' | relative_url }} "Image dialog"){:class="img-fluid"}
 
 * Common
   *  Split data by rows;

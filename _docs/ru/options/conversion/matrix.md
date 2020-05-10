@@ -3,16 +3,16 @@ title: Матрица
 ---
 Настройка расположения битов исходного изображения в блоках выходных данных. Настройка производится в таблице, содержащей операции сдвига и маски.
 
-![Диалог настроек матрицы](/assets/images/options/conversion/matrix/index-1.png "Диалог настроек матрицы"){:class="img-fluid"}
+![Диалог настроек матрицы]({{ '/assets/images/options/conversion/matrix/index-1.png' | relative_url }} "Диалог настроек матрицы"){:class="img-fluid"}
 
 Для добавления новой операции выборки/сдвига следует выбрать нужные биты исходного значения с помошью клавиатуры или мыши, и вызвать контекстное меню. В нём можно указать, на какое количество бит и в какую сторону сдвигать биты.
 
-![Добавление операции сдвига](/assets/images/options/conversion/matrix/index-2.png "Добавление операции сдвига"){:class="img-fluid"}
+![Добавление операции сдвига]({{ '/assets/images/options/conversion/matrix/index-2.png' | relative_url }} "Добавление операции сдвига"){:class="img-fluid"}
 
 Сдвинуть или удалить существующую операцию можно из её контекстного меню.
 
-![Изменение операции сдвига](/assets/images/options/conversion/matrix/index-3.png "Изменение операции сдвига"){:class="img-fluid"}
+![Изменение операции сдвига]({{ '/assets/images/options/conversion/matrix/index-3.png' | relative_url }} "Изменение операции сдвига"){:class="img-fluid"}
 
 Маски «Used», «AND», «OR», «Fill» редактируются вручную, вводом «1» или «0» в битовых полях, либо из контекстного меню.
 
-![Изменение битов маски](/assets/images/options/conversion/matrix/index-4.png "Изменение битов маски"){:class="img-fluid"}
+![Изменение битов маски]({{ '/assets/images/options/conversion/matrix/index-4.png' | relative_url }} "Изменение битов маски"){:class="img-fluid"}

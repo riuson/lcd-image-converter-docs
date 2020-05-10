@@ -3,4 +3,4 @@ title: Шаблоны
 ---
 Здесь выбираются шаблоны изображений и шрифтов для текущей настройки.
 
-![Диалог настроек шаблонов](/assets/images/options/conversion/templates-1.png "Диалог настроек шаблонов"){:class="img-fluid"}
+![Диалог настроек шаблонов]({{ '/assets/images/options/conversion/templates-1.png' | relative_url }} "Диалог настроек шаблонов"){:class="img-fluid"}

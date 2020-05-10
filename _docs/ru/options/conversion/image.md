@@ -3,7 +3,7 @@ title: Изображение
 ---
 Параметры преобразования отдельного изображения.
 
-![Диалог настроек изображения](/assets/images/options/conversion/image-1.png "Диалог настроек изображения"){:class="img-fluid"}
+![Диалог настроек изображения]({{ '/assets/images/options/conversion/image-1.png' | relative_url }} "Диалог настроек изображения"){:class="img-fluid"}
 
 * Общие
   *  Разбивать данные на строки;

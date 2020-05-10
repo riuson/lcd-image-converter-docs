@@ -20,4 +20,4 @@ title: Шрифты
 
 Внешний вид редактора шрифтов:
 
-![Внешний вид редактора шрифтов](/assets/images/fonts/font-editor-1.png "Внешний вид редактора шрифтов"){:class="img-fluid"}
+![Внешний вид редактора шрифтов]({{ '/assets/images/fonts/font-editor-1.png' | relative_url }} "Внешний вид редактора шрифтов"){:class="img-fluid"}

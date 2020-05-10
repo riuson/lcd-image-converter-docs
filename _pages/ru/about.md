@@ -19,7 +19,7 @@ title: О проекте
     * Сжатие RLE;
     * С различными контроллерами дисплеев, не ограничиваясь одной конкретной моделью.
 
-![Main](/storage/app/media/lcd-image-converter/main.png){:class="img-fluid"}
+![Main]({{ '/assets/images/main.png' | relative_url }}){:class="img-fluid"}
 
 <div class="embed-responsive embed-responsive-16by9">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/-GVR6G2tyQo?rel=0" frameborder="0" allowfullscreen></iframe>
