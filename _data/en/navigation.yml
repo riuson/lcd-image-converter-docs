@@ -2,10 +2,22 @@
 # pages in order as they should show up.
 main:
   - title: "<span class='fa fa-info'></span>&nbsp;About"
-    url: /pages/en/about/
+    url: "/pages/current_lang/about/"
   - title: "<span class='fa fa-book'></span>&nbsp;Docs"
-    url: /docs/
+    url: "/pages/current_lang/docs"
   - title: "<span class='fa fa-download'></span>&nbsp;Downloads"
     url: https://sourceforge.net/projects/lcd-image-converter/
   - title: "<span class='fa fa-github'></span>&nbsp;GitHub"
     url: https://github.com/riuson/lcd-image-converter
+
+additional:
+  lang:
+    title: "<span class='fas fa-language'></span>&nbsp;Language"
+
+languages:
+  - title: Русский
+    code: ru
+    icon: ru
+  - title: English
+    code: en
+    icon: us

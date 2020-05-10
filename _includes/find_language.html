@@ -1,0 +1,18 @@
+{%- comment -%}
+  Finds current language
+  Input parameter: url
+{%- endcomment -%}
+
+{%- assign languages = site.languages | split: ", " -%}
+{%- assign current_lang = "" -%}
+{%- for lang in languages -%}
+  {%- assign test_lang = "/" | append: lang | append: "/" -%}
+  {%- if include.url contains test_lang -%}
+    {%- assign current_lang = lang -%}
+    {%- assign current_lang_mask = test_lang -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{%- comment -%}
+  Output variables: current_lang, current_lang_mask
+{%- endcomment -%}

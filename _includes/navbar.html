@@ -1,16 +1,30 @@
+{%- include find_language.html url=page.url -%}
 <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
   <div class="container"><a class="navbar-brand logo" href="#">{{ site.title }}</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse"
           id="navcol-1">
           <ul class="nav navbar-nav ml-auto">
-            {%- for link in site.data.navigation.main -%}
+            {%- for link in site.data[current_lang].navigation.main -%}
               {%- if link.url contains "http" -%}
-                {%- assign url = link.url -%}
+                {%- assign url = link.url | replace: "current_lang", current_lang -%}
               {%- else -%}
-                {%- assign url = link.url | relative_url -%}
+                {%- assign url = link.url | replace: "current_lang", current_lang | relative_url -%}
               {%- endif -%}
-              <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url }}">{{ link.title }}</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url }}">{{ link.title | raw }}</a></li>
             {%- endfor -%}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ site.data[current_lang].navigation.additional.lang.title | raw }}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {%- for link in site.data[current_lang].navigation.languages -%}
+                  <a class="dropdown-item" href="{{ page.url | replace_first: current_lang, link.code }}">
+                    <img src="/assets/images/languages/{{ link.icon }}.svg" height="16" title="{{ link.title }}">
+                    {{ link.title | raw }}
+                  </a>
+                {%- endfor -%}
+              </div>
+            </li>
           </ul>
       </div>
   </div>

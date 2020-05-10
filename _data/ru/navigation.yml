@@ -1,0 +1,23 @@
+# If you want to link only specific pages in your header, add the path to the
+# pages in order as they should show up.
+main:
+  - title: "<span class='fa fa-info'></span>&nbsp;О проекте"
+    url: "/pages/current_lang/about/"
+  - title: "<span class='fa fa-book'></span>&nbsp;Документация"
+    url: "/pages/current_lang/docs"
+  - title: "<span class='fa fa-download'></span>&nbsp;Загрузки"
+    url: https://sourceforge.net/projects/lcd-image-converter/
+  - title: "<span class='fa fa-github'></span>&nbsp;GitHub"
+    url: https://github.com/riuson/lcd-image-converter
+
+additional:
+  lang:
+    title: "<span class='fas fa-language'></span>&nbsp;Язык"
+
+languages:
+  - title: Русский
+    code: ru
+    icon: ru
+  - title: English
+    code: en
+    icon: us
