@@ -6,60 +6,115 @@ order: 5
 
 Собственный файл шаблона можно выбрать в меню Настройки -> Преобразование -> Шаблоны, либо можно использовать встроенные шаблоны по умолчанию, указав пути к файлам *:/templates/image_convert* and *:/templates/font_convert* .
 
-Имя тега | Прежнее имя | Краткое описание
-:--------|:------------|:----------------
- doc_data_type | dataType | image или font |
- doc_filename | fileName | путь к исходному xml файлу |
- doc_name | documentName | имя документа, вводится при создании
- doc_name_ws | documentName_ws | имя документа без пробелов
-| &nbsp; | &nbsp; | &nbsp; |
- fnt_antialiasing | fontAntialiasing | есть сглаживание (yes) или нет (no)
- fnt_ascent | | верхний вынос
- fnt_descent | | нижний вынос
- fnt_encoding | encoding | кодировка, испольуемая для преобразования символов в шестнадцатеричное представление
- fnt_family | fontFamily | семейство шрифта
- fnt_size | fontSize | размер
- fnt_string | string | строка символов, реализованных в исходнике шрифта
- fnt_style | fontStyle | стиль
- fnt_use_bom | bom | добавляется ли (yes) Byte Order Mark к коду символа или нет (no)
- fnt_width_type | fontWidthType | proportional или monospaced
-| &nbsp; | &nbsp; | &nbsp; |
- img_byte_order | bytesOrder | порядок байтов
- img_data_block_size | dataBlockSize | число бит в блоке данных
- img_rle | rle | используется ли RLE сжатие (yes) или нет (no)
- img_split_to_rows | splitToRows | разбивается ли строковое представление данных по строкам изображения
-| &nbsp; | &nbsp; | &nbsp; |
- out_blocks_count | blocksCount | число блоков данных в массиве
- out_bpp | bpp | число бит на точку
- out_char_code | charCode | код символа в шестнадцатеричном виде
- out_char_code_sim | | кода дубликата символа в шестнадцатеричном виде (или пустая строка)
- out_char_text | charText | символ в текстовом виде
- out_char_text_sim | | дубликат символа в текстовом виде (или пустая строка)
- out_comma | comma | подставляет запятую ',', если не является последним вхождением в списке, тогда подставляет пустую строку
- out_data_indent | imageDataIndent | отступы строк данных изображения (табуляция или пробел, из файла шаблона)
- out_image_data | imageData | массив блоков данных изображения в текстовом виде
- out_image_preview | | текстовый предпросмотр изображения
- out_image_height | height | высота изображения
- out_image_width | width | ширина изображения
- out_images_count | imagesCount | число изображений (символов) в файле шрифта
- out_images_max_height | | максимальная высота изображения
- out_images_max_width | | максимальная ширина изображения
- out_preset_name | preset | название предустановки преобразования
-| &nbsp; | &nbsp; | &nbsp; |
- pre_conv_type | convType | тип преобразования (monochrome, grayscale, color)
- pre_inverse | inverse | инверсия изображения перед обработкой
- pre_mono_edge | edge | значение порога для monochrome-edge
- pre_mono_type | monoType | тип монохромного преобразования (edge, digguse dither, ordered dither, threshold dither)
- pre_scan_main | scanMain | основное направление сканирования
- pre_scan_sub | scanSub | направление сканирования линий
- pre_use_bands | bands | используются полосы (yes) или нет (no)
- pre_band_width | bandWidth | ширина полос
-| &nbsp; | &nbsp; | &nbsp; |
- tmpl_filename | templateFile | имя файла шаблона
+| Имя тега             | Краткое описание
+|:---------------------|:----------------------------------------
+ doc_data_type         | image или font
+ doc_filename          | путь к исходному xml файлу
+ doc_name              | имя документа, вводится при создании
+ doc_name_ws           | имя документа без пробелов
+|                      |
+ fnt_antialiasing      | есть сглаживание (yes) или нет (no)
+ fnt_ascent            | верхний вынос
+ fnt_descent           | нижний вынос
+ fnt_encoding          | кодировка, испольуемая для преобразования символов в шестнадцатеричное представление
+ fnt_family            | семейство шрифта
+ fnt_size              | размер
+ fnt_string            | строка символов, реализованных в исходнике шрифта
+ fnt_style             | стиль
+ fnt_use_bom           | добавляется ли (yes) Byte Order Mark к коду символа или нет (no)
+ fnt_width_type        | proportional или monospaced
+|                      |
+ img_byte_order        | порядок байтов
+ img_data_block_size   | число бит в блоке данных
+ img_rle               | используется ли RLE сжатие (yes) или нет (no)
+ img_split_to_rows     | разбивается ли строковое представление данных по строкам изображения
+|                      | 
+ out_blocks_count      | число блоков данных в массиве
+ out_bpp               | число бит на точку
+ out_char_code         | код символа в шестнадцатеричном виде
+ out_char_code_sim     | кода дубликата символа в шестнадцатеричном виде (или пустая строка)
+ out_char_text         | символ в текстовом виде
+ out_char_text_sim     | дубликат символа в текстовом виде (или пустая строка)
+ out_comma             | подставляет запятую ',', если не является последним вхождением в списке, тогда подставляет пустую строку
+ out_data_indent       | отступы строк данных изображения (табуляция или пробел, из файла шаблона)
+ out_image_data        | массив блоков данных изображения в текстовом виде
+ out_image_preview     | текстовый предпросмотр изображения
+ out_image_height      | высота изображения
+ out_image_width       | ширина изображения
+ out_images_count      | число изображений (символов) в файле шрифта
+ out_images_max_height | максимальная высота изображения
+ out_images_max_width  | максимальная ширина изображения
+ out_preset_name       | название предустановки преобразования
+|                      | 
+ pre_conv_type         | тип преобразования (monochrome, grayscale, color)
+ pre_inverse           | инверсия изображения перед обработкой
+ pre_mono_edge         | значение порога для monochrome-edge
+ pre_mono_type         | тип монохромного преобразования (edge, digguse dither, ordered dither, threshold dither)
+ pre_scan_main         | основное направление сканирования
+ pre_scan_sub          | направление сканирования линий
+ pre_use_bands         | используются полосы (yes) или нет (no)
+ pre_band_width        | ширина полос
+|                      | 
+ tmpl_filename         | имя файла шаблона
 {: .table .table-striped .table-hover .table-sm }
 
-Участок шаблона между **$(start_block_images_table)** и **$(end_block_images_table)** повторяется для каждого изображения (символа) в файле.
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Устаревшие теги
+  </a>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" markdown="block">
 
+| Имя тега             | Краткое описание
+|:---------------------|:----------------------------------------
+ dataType              | image или font |
+ fileName              | путь к исходному xml файлу |
+ documentName          | имя документа, вводится при создании
+ documentName_ws       | имя документа без пробелов
+|                      | 
+ fontAntialiasing      | есть сглаживание (yes) или нет (no)
+ encoding              | кодировка, испольуемая для преобразования символов в шестнадцатеричное представление
+ fontFamily            | семейство шрифта
+ fontSize              | размер
+ string                | строка символов, реализованных в исходнике шрифта
+ fontStyle             | стиль
+ bom                   | добавляется ли (yes) Byte Order Mark к коду символа или нет (no)
+ fontWidthType         | proportional или monospaced
+|                      | 
+ bytesOrder            | порядок байтов
+ dataBlockSize         | число бит в блоке данных
+ rle                   | используется ли RLE сжатие (yes) или нет (no)
+ splitToRows           | разбивается ли строковое представление данных по строкам изображения
+|                      | 
+ blocksCount           | число блоков данных в массиве
+ bpp                   | число бит на точку
+ charCode              | код символа в шестнадцатеричном виде
+ charText              | символ в текстовом виде
+ comma                 | подставляет запятую ',', если не является последним вхождением в списке, тогда подставляет пустую строку
+ imageDataIndent       | отступы строк данных изображения (табуляция или пробел, из файла шаблона)
+ imageData             | массив блоков данных изображения в текстовом виде
+ height                | высота изображения
+ width                 | ширина изображения
+ imagesCount           | число изображений (символов) в файле шрифта
+ preset                | название предустановки преобразования
+|                      | 
+ convType              | тип преобразования (monochrome, grayscale, color)
+ inverse               | инверсия изображения перед обработкой
+ edge                  | значение порога для monochrome-edge
+ monoType              | тип монохромного преобразования (edge, digguse dither, ordered dither, threshold dither)
+ scanMain              | основное направление сканирования
+ scanSub               | направление сканирования линий
+ bands                 | используются полосы (yes) или нет (no)
+ bandWidth             | ширина полос
+|                      | 
+ templateFile          | имя файла шаблона
+{: .table .table-striped .table-hover .table-sm }
+
+  </div>
+</div>
+
+Участок шаблона между **$(start_block_images_table)** и **$(end_block_images_table)** повторяется для каждого изображения (символа) в файле.
 
 Список используемых кодеков:
 

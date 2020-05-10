@@ -7,57 +7,113 @@ This file is simple text file with key tags, surrounded with *$(tag)* or *@tag@*
 
 You can select own files in **Options -> Conversion -> Templates**, or use defaults templates *:/templates/image_convert* and *:/templates/font_convert* .
 
- Tag name | Deprecated name | Short description
-:--------|:------------|:----------------
- doc_data_type | dataType | image or font
- doc_filename | fileName | xml source data file
- doc_name | documentName | name of document, entered on creation
- doc_name_ws | documentName_ws | documentName without spaces
-| &nbsp; | &nbsp; | &nbsp; |
- fnt_antialiasing | fontAntialiasing | font antialiasing
- fnt_ascent | | font ascent
- fnt_descent | | font descent
- fnt_encoding | encoding | encoding, used to convert character to hexadecimal representation
- fnt_family | fontFamily | font family
- fnt_size | fontSize | font size
- fnt_string | string | string of characters, what contained in file
- fnt_style | fontStyle | font style
- fnt_use_bom | bom | append (yes) on not append (no) Byte Order Mark to character's code
- fnt_width_type | fontWidthType | font width type (proportional or monospaced)
-| &nbsp; | &nbsp; | &nbsp; |
- img_byte_order | bytesOrder | bytes order
- img_data_block_size | dataBlockSize | data blocks size in bits
- img_rle | rle | RLE compression used (yes) or not used (no)
- img_split_to_rows | splitToRows | split string representation by rows
-| &nbsp; | &nbsp; | &nbsp; |
- out_blocks_count | blocksCount | number of blocks in data array
- out_bpp | bpp | bits per pixel
- out_char_code | charCode | code of character in hexadecimal representation
- out_char_code_sim | | code of character's duplicate in hexadecimal representation (or empty string)
- out_char_text | charText | character in text form
- out_char_text_sim | | duplicate character in text form (or empty string)
- out_comma | comma | places ',', but nothing ('') at the end of list
- out_data_indent | imageDataIndent | image data indent (tab or spaces from template file)
- out_image_data | imageData | image's data array as text
- out_image_preview | | text preview of image
- out_image_height | height | image height
- out_image_width | width | image width
- out_images_count | imagesCount | number of images (characters) in data file
- out_images_max_height | | images max height
- out_images_max_width | | images max width
- out_preset_name | preset | conversion preset name
-| &nbsp; | &nbsp; | &nbsp; |
- pre_conv_type | convType | conversion type (monochrome, grayscale, color)
- pre_inverse | inverse | invert image before processing
- pre_mono_edge | edge | edge value for monochrome-edge
- pre_mono_type | monoType | monochrome conversion type (edge, digguse dither, ordered dither, threshold dither)
- pre_scan_main | scanMain | main scanning direction
- pre_scan_sub | scanSub | line scanning direction
- pre_use_bands | bands | used bands (yes or no)
- pre_band_width | bandWidth | width of band
-| &nbsp; | &nbsp; | &nbsp; |
- tmpl_filename | templateFile | template file name
+| Tag name             | Short description
+|:---------------------|:----------------------------------------
+ doc_data_type         | image or font
+ doc_filename          | xml source data file
+ doc_name              | name of document, entered on creation
+ doc_name_ws           | documentName without spaces
+|                      |
+ fnt_antialiasing      | font antialiasing
+ fnt_ascent            | font ascent
+ fnt_descent           | font descent
+ fnt_encoding          | encoding, used to convert character to hexadecimal representation
+ fnt_family            | font family
+ fnt_size              | font size
+ fnt_string            | string of characters, what contained in file
+ fnt_style             | font style
+ fnt_use_bom           | append (yes) on not append (no) Byte Order Mark to character's code
+ fnt_width_type        | font width type (proportional or monospaced)
+|                      |
+ img_byte_order        | bytes order
+ img_data_block_size   | data blocks size in bits
+ img_rle               | RLE compression used (yes) or not used (no)
+ img_split_to_rows     | split string representation by rows
+|                      |
+ out_blocks_count      | number of blocks in data array
+ out_bpp               | bits per pixel
+ out_char_code         | code of character in hexadecimal representation
+ out_char_code_sim     | code of character's duplicate in hexadecimal representation (or empty string)
+ out_char_text         | character in text form
+ out_char_text_sim     | duplicate character in text form (or empty string)
+ out_comma             | places ',', but nothing ('') at the end of list
+ out_data_indent       | image data indent (tab or spaces from template file)
+ out_image_data        | image's data array as text
+ out_image_preview     | text preview of image
+ out_image_height      | image height
+ out_image_width       | image width
+ out_images_count      | number of images (characters) in data file
+ out_images_max_height | images max height
+ out_images_max_width  | images max width
+ out_preset_name       | conversion preset name
+|                      |
+ pre_conv_type         | conversion type (monochrome, grayscale, color)
+ pre_inverse           | invert image before processing
+ pre_mono_edge         | edge value for monochrome-edge
+ pre_mono_type         | monochrome conversion type (edge, digguse dither, ordered dither, threshold dither)
+ pre_scan_main         | main scanning direction
+ pre_scan_sub          | line scanning direction
+ pre_use_bands         | used bands (yes or no)
+ pre_band_width        | width of band
+|                      |
+ tmpl_filename         | template file name
 {: .table .table-striped .table-hover .table-sm }
+
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Obsolete tags
+  </a>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" markdown="block">
+
+| Tag name             | Short description
+|:---------------------|:----------------------------------------
+ dataType              | image or font
+ fileName              | xml source data file
+ documentName          | name of document, entered on creation
+ documentName_ws       | documentName without spaces
+|                      |
+ fontAntialiasing      | font antialiasing
+ encoding              | encoding, used to convert character to hexadecimal representation
+ fontFamily            | font family
+ fontSize              | font size
+ string                | string of characters, what contained in file
+ fontStyle             | font style
+ bom                   | append (yes) on not append (no) Byte Order Mark to character's code
+ fontWidthType         | font width type (proportional or monospaced)
+|                      |
+ bytesOrder            | bytes order
+ dataBlockSize         | data blocks size in bits
+ rle                   | RLE compression used (yes) or not used (no)
+ splitToRows           | split string representation by rows
+|                      |
+ blocksCount           | number of blocks in data array
+ bpp                   | bits per pixel
+ charCode              | code of character in hexadecimal representation
+ charText              | character in text form
+ comma                 | places ',', but nothing ('') at the end of list
+ imageDataIndent       | image data indent (tab or spaces from template file)
+ imageData             | image's data array as text
+ height                | image height
+ width                 | image width
+ imagesCount           | number of images (characters) in data file
+ preset                | conversion preset name
+|                      |
+ convType              | conversion type (monochrome, grayscale, color)
+ inverse               | invert image before processing
+ edge                  | edge value for monochrome-edge
+ monoType              | monochrome conversion type (edge, digguse dither, ordered dither, threshold dither)
+ scanMain              | main scanning direction
+ scanSub               | line scanning direction
+ bands                 | used bands (yes or no)
+ bandWidth             | width of band
+|                      |
+ templateFile          | template file name
+{: .table .table-striped .table-hover .table-sm }
+
+  </div>
+</div>
 
 Template block between **$(start_block_images_table)** and **$(end_block_images_table)** repeats for each image in data file.
 
