@@ -1,6 +1,11 @@
 ---
 title: Сборка
 ---
+<div class="alert alert-warning">
+Обратите внимание, что файл русского перевода <b>.qm</b> не находится под контролем версий, потому что он <u>бинарный</u> (внезапно!) и является <u>производным</u> от файла <b>.ts</b>, который как раз и находится под контролем версий.<br>
+Ошибку (типа <a href="https://github.com/riuson/lcd-image-converter/issues/45">Cannot build on Mac OS 10.12.4 # 45</a>) на этапе <b>qmake</b> следует <u>игнорировать</u>. Файл будет создан автоматически на этапе <b>make</b>.
+</div>
+
 Клонировать репозиторий:
 
 ```bash
@@ -73,10 +78,5 @@ g++ -m64 -Wl,-O1 -o _linux/release/lcd-image-converter .obj/main.o .obj/bitmapco
 .obj/moc_dialogconvert.o .obj/moc_dialogsetup.o .obj/moc_parser.o .obj/qrc_resources.o    
 -L./_linux/release -L/usr/lib/x86_64-linux-gnu -lQtXmlPatterns -lQtXml -lQtGui -lQtCore -lpthread
 ```
-
-<div class="alert alert-warning">
-Обратите внимание: файл русского перевода <b>.qm</b> не находится под контролем версий, потому что он <u>бинарный</u> (внезапно!) и является <u>производным</u> от файла <b>.ts</b>, который находится под контролем версий.<br>
-Ошибку на этапе <b>qmake</b> следует <u>игнорировать</u>: <a href="https://github.com/riuson/lcd-image-converter/issues/45">Cannot build on Mac OS 10.12.4 # 45</a>. Файл будет создан автоматически на этапе <b>make</b>.
-</div>
 
 Лог сборки программы можно посмотреть на <a href="https://travis-ci.org/riuson/lcd-image-converter" target="_blank">Travis CI</a>.

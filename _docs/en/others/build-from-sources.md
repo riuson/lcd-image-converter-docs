@@ -1,6 +1,11 @@
 ---
 title: Build
 ---
+<div class="alert alert-warning">
+The russian translation's file <b>.qm</b> is not under version control, because it is a <u>binary</u> file and is <u>derived</u> from the <b>.ts</b> file, which is under version control. <br>
+The error (<a href="https://github.com/riuson/lcd-image-converter/issues/45">Cannot build on Mac OS 10.12.4 # 45</a>) on the <b>qmake</b> stage should be <u>ignored</u>. This file will be created automatically at the <b>make</b> stage.
+</div>
+
 Clone repository:
 
 ```bash
@@ -73,11 +78,5 @@ g++ -m64 -Wl,-O1 -o _linux/release/lcd-image-converter .obj/main.o .obj/bitmapco
 .obj/moc_dialogconvert.o .obj/moc_dialogsetup.o .obj/moc_parser.o .obj/qrc_resources.o    
 -L./_linux/release -L/usr/lib/x86_64-linux-gnu -lQtXmlPatterns -lQtXml -lQtGui -lQtCore -lpthread
 ```
-
-<div class="alert alert-warning">
-Attention!<br>
-The russian translation file <b>.qm</b> is not under version control, because it is <u>binary</u> and is <u>derived</u> from the <b>.ts</b> file, which is under version control. <br>
-The error on the <b>qmake</b> stage should be <u>ignored</u>: <a href="https://github.com/riuson/lcd-image-converter/issues/45">Cannot build on Mac OS 10.12.4 # 45</a>. The file will be created automatically at the <b>make</b> stage.
-</div>
 
 Build log available on <a href="https://travis-ci.org/riuson/lcd-image-converter" target="_blank">Travis CI</a>.

@@ -3,10 +3,10 @@ title: Command line
 ---
 In this mode, a document's conversion can be performed without using of GUI, but with pre-defined settings.
 
-**Notice**
-
-  *  Application version for Windows prints no messages to the console. If they are necessary, rebuild the application with the option `CONFIG += console` in the project file (lcd-image-converter.pro);
-  *  Required Qt version >= 5.2.
+<div class="alert alert-info">
+Application version for Windows prints no messages to the console. If they are necessary, rebuild the application with the option `CONFIG += console` in the project file (lcd-image-converter.pro);<br>
+Required Qt version >= 5.2.
+</div>
 
 # How to call this mode
 

@@ -1,5 +1,5 @@
 ---
-title: HEX to BIN
+title: "HEX&nbsp;to&nbsp;BIN"
 ---
 # How to call this mode
 
@@ -21,13 +21,11 @@ Options:
 
 # Preset
 
-Settings:
-
   *  Image -> Prefix = "0x"
   *  Image -> Suffix = ""
   *  Image -> Delimiter = " "
 
-Template file for image:
+# Template file for image
 
 ```cpp
 $(start_block_images_table)
@@ -41,7 +39,7 @@ $(end_block_images_table)
 
 uint8, uint16, uint24, uint32 - data size.
 
-le, be - little endian and big endian.
+le, be - bytes order, little endian or big endian.
 
 # Example
 

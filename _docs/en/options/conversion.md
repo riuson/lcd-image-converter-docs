@@ -10,6 +10,7 @@ To create a new preset, should:
   *  Save its with new name.
 
 If you remove all of the existing presets, the application recreates presets by default when you open the settings window.
+
 ![Conversion settings dialog]({{ '/assets/images/options/conversion/index-1.png' | relative_url }} "Conversion settings dialog"){:class="img-fluid"}
 
 **Show Preview** shows window with an example of converting an image into text, given the current settings. 

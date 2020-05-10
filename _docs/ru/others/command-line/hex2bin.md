@@ -1,9 +1,9 @@
 ---
-title: HEX в BIN
+title: "HEX&nbsp;в&nbsp;BIN"
 ---
-# How to call this mode
+# Способ вызова
 
-Help for hex to bin conversion mode:
+Спрвка по режиму преобразования hex в bin:
 
 ```bash
 $ ./lcd-image-converter --mode=hex2bin --help
@@ -19,15 +19,13 @@ Options:
   -o, --output <path>  Full <path> to output binary result.
 ```
 
-# Preset
-
-Settings:
+# Настройки преобразования
 
   *  Image -> Prefix = "0x"
   *  Image -> Suffix = ""
   *  Image -> Delimiter = " "
 
-Template file for image:
+# Файл шаблона для изображения:
 
 ```cpp
 $(start_block_images_table)
@@ -39,11 +37,11 @@ uint$(img_data_block_size) $(out_image_data)
 $(end_block_images_table)
 ```
 
-uint8, uint16, uint24, uint32 - data size.
+uint8, uint16, uint24, uint32 - указывают размер данных.
 
-le, be - little endian and big endian.
+le, be - порядок байт, little endian или big endian.
 
-# Example
+# Пример
 
 ```bash
 $ ./lcd-image-converter --mode=hex2bin \
@@ -51,7 +49,7 @@ $ ./lcd-image-converter --mode=hex2bin \
     --output=/temp/colors.bin
 ```
 
-"C" file after conversion to sources:
+Файл "C" после преобразования в формат исходников (с обычным шаблоном):
 
 ```cpp
 static const uint8_t image_data_colors[10] = {
@@ -69,7 +67,7 @@ static const uint8_t image_data_colors[10] = {
 const tImage colors = { image_data_colors, 10, 5};
 ```
 
-With modified template:
+С модифицированным шаблоном:
 
 ```cpp
 le
@@ -88,12 +86,12 @@ uint8 0xd0
     0xf0
 ```
 
-Binary file after conversion from hex to bin::
+Бинарный файл Binary после преобразования из hex в bin:
 
 ```
 00000000: 0A 00 05 00 0A 00 D0 F0    90 F0 D0 B0 D0 F0 90 F0
 ```
 
-# Other formats
+# Другие форматы
 
-From this binary file we can create files in variety of other formats. It is enough to take advantage of such a wonderful set of tools as [SRecord](http://srecord.sourceforge.net/).
+Из данного бинарного файла можно создать файлы множества других форматов. Достаточно применить такой полезный набор утилит, как [SRecord](http://srecord.sourceforge.net/).
