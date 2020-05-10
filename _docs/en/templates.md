@@ -57,7 +57,7 @@ You can select own files in **Options -> Conversion -> Templates**, or use defau
  pre_band_width | bandWidth | width of band
 | &nbsp; | &nbsp; | &nbsp; |
  tmpl_filename | templateFile | template file name
-<br>
+{: .table .table-striped .table-hover .table-sm }
 
 Template block between **$(start_block_images_table)** and **$(end_block_images_table)** repeats for each image in data file.
 

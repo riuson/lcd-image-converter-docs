@@ -56,7 +56,7 @@ order: 5
  pre_band_width | bandWidth | ширина полос
 | &nbsp; | &nbsp; | &nbsp; |
  tmpl_filename | templateFile | имя файла шаблона
-<br>
+{: .table .table-striped .table-hover .table-sm }
 
 Участок шаблона между **$(start_block_images_table)** и **$(end_block_images_table)** повторяется для каждого изображения (символа) в файле.
 
