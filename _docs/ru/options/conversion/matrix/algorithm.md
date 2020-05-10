@@ -8,11 +8,11 @@ title: Алгоритм
 Обработка исходного изображения. Каждая точка изображения переводится в целое число, соответствующее значению RGB.
 
   *  Если выбран монохромный режим, все биты этого числа устанавливаются в 0, либо в 1.
-  ![Исходные данные](/assets/images/options/conversion/matrix/algorithm-1.png "Исходные данные"){.img-responsive}
+  ![Исходные данные](/assets/images/options/conversion/matrix/algorithm-1.png "Исходные данные"){:class="img-fluid"}
   *  Если выбран режим градаций серого, функцией [qGray](http://qt-project.org/doc/qt-4.8/qcolor.html#qGray-2) вычисляется значение серого, и каждое из полей RGB заменяется на значение серого.
-  ![Исходные данные](/assets/images/options/conversion/matrix/algorithm-2.png "Исходные данные"){.img-responsive}
+  ![Исходные данные](/assets/images/options/conversion/matrix/algorithm-2.png "Исходные данные"){:class="img-fluid"}
   *  Цветное изображение не изменяется.
-  ![Исходные данные](/assets/images/options/conversion/matrix/algorithm-3.png "Исходные данные"){.img-responsive}
+  ![Исходные данные](/assets/images/options/conversion/matrix/algorithm-3.png "Исходные данные"){:class="img-fluid"}
 
 В результате получается массив данных, далее обрабатываемый масками.
 
@@ -23,7 +23,7 @@ title: Алгоритм
   *  Первая, маска «AND», позволяет сбросить указанные биты данных в 0 с помощью операции логического «И»;
   *  Вторая, «OR», позволяет установить указанные биты данных в 1 логическим «ИЛИ».
 
-![Операция сдвига](/assets/images/options/conversion/matrix/algorithm-4.png "Операция сдвига"){.img-responsive}
+![Операция сдвига](/assets/images/options/conversion/matrix/algorithm-4.png "Операция сдвига"){:class="img-fluid"}
 
 # Шаг 3
 
@@ -31,7 +31,7 @@ title: Алгоритм
 
 *Примечание: маска «Used» не может быть пустой (0x00000000), должен быть установлен как минимум 1 бит.*
 
-![Поток бит](/assets/images/options/conversion/matrix/algorithm-5.png "Поток бит"){.img-responsive}
+![Поток бит](/assets/images/options/conversion/matrix/algorithm-5.png "Поток бит"){:class="img-fluid"}
 
 # Шаг 4
 
@@ -47,9 +47,9 @@ title: Алгоритм
 
 *Примечание: маска «Fill» не может быть пустой (0x00000000), так как это приведёт в бесконечному циклу упаковки данных.*
 
-![Упаковка](/assets/images/options/conversion/matrix/algorithm-6.png "Упаковка"){.img-responsive}
+![Упаковка](/assets/images/options/conversion/matrix/algorithm-6.png "Упаковка"){:class="img-fluid"}
 
-![Анимация](/assets/images/options/conversion/matrix/algorithm-6.gif){.img-responsive}
+![Анимация](/assets/images/options/conversion/matrix/algorithm-6.gif){:class="img-fluid"}
 
 # Шаг 5
 

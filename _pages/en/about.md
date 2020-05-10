@@ -21,7 +21,7 @@ Features:
     * RLE compression;
     * With different display controllers, not limited by one particular model.
 
-![Main](/storage/app/media/lcd-image-converter/main.png){.img-responsive}
+![Main](/storage/app/media/lcd-image-converter/main.png){:class="img-fluid"}
 
 <div class="embed-responsive embed-responsive-16by9">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/-GVR6G2tyQo?rel=0" frameborder="0" allowfullscreen></iframe>

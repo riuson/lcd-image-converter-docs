@@ -20,4 +20,4 @@ For each selected character, all image editor’s functions are accessible.
 
 Font editor window:
 
-![Внешний вид редактора шрифтов](/assets/images/fonts/font-editor-1.png "Внешний вид редактора шрифтов"){.img-responsive}
+![Внешний вид редактора шрифтов](/assets/images/fonts/font-editor-1.png "Внешний вид редактора шрифтов"){:class="img-fluid"}

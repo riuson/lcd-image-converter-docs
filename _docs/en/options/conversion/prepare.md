@@ -20,14 +20,14 @@ The order of scanning points of the image is controlled by script. There are 16 
 
 In the right pane displays a simple animation showing the scanning order of the points in the specified script. The parameters of time are the total period of the animation and the update interval.
 
-![Prepare dialog](/assets/images/options/conversion/prepare-1.png "Prepare dialog"){.img-responsive}
+![Prepare dialog](/assets/images/options/conversion/prepare-1.png "Prepare dialog"){:class="img-fluid"}
 
 Additionally, possible to set scan bands, which can be convenient for some LCD with a specific memory allocation.
 
 E.g. this sequence:
 
-![Scan direction example](/assets/images/options/conversion/prepare-2.png "Scan direction example"){.img-responsive}
+![Scan direction example](/assets/images/options/conversion/prepare-2.png "Scan direction example"){:class="img-fluid"}
 
 For display memory allocation:
 
-![Memory allocation example](/assets/images/options/conversion/prepare-3.png "Memory allocation example"){.img-responsive}
+![Memory allocation example](/assets/images/options/conversion/prepare-3.png "Memory allocation example"){:class="img-fluid"}

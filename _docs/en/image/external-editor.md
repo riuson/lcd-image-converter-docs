@@ -13,4 +13,4 @@ Algorithm:
 
 The path to the external editor is specified in the **Options -> External Editor**:
 
-![Dialog](/assets/images/image/external-1.png "Dialog"){.img-responsive}
+![Dialog](/assets/images/image/external-1.png "Dialog"){:class="img-fluid"}

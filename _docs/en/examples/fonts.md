@@ -7,4 +7,4 @@ title: Fonts
 
 Font on monochrome LCD (including russian, UTF-8):
 
-![Text on monochrome LCD](/assets/images/examples/fonts-1.jpg "Text on monochrome LCD"){.img-responsive}
+![Text on monochrome LCD](/assets/images/examples/fonts-1.jpg "Text on monochrome LCD"){:class="img-fluid"}

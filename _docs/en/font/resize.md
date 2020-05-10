@@ -7,4 +7,4 @@ This feature applies to all the images of characters. Be careful, because some s
 
 To resize only certain characters, select them and call the menu item **Image - Resize**.
 
-![Resize dialog](/assets/images/fonts/resize-1.png "Resize dialog"){.img-responsive}
+![Resize dialog](/assets/images/fonts/resize-1.png "Resize dialog"){:class="img-fluid"}
