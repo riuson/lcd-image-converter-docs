@@ -60,11 +60,13 @@ defaults:
     values:
       layout: "pages"
       order: 1
+      language: en
   - scope:
       path: "content/_ru/*"
     values:
       layout: "pages"
       order: 1
+      language: ru
   - scope:
       path: "content/_en/docs/*"
     values:

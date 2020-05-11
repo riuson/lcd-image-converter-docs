@@ -3,12 +3,12 @@
   Input parameter: url
 {%- endcomment -%}
 
-{%- assign languages = site.languages | split: ", " -%}
-{%- assign current_lang = languages | first -%}
+{%- assign languages_array = site.languages | split: ", " -%}
+{%- assign current_lang = languages_array | first -%}
 {%- assign url_parts = include.url | split: "/" -%}
 {%- assign url_lang = url_parts[1] -%}
 
-{%- for lang in languages -%}
+{%- for lang in languages_array -%}
   {%- if url_lang == lang -%}
     {%- assign current_lang = lang -%}
     {%- break -%}
@@ -18,5 +18,5 @@
 {%- assign current_lang_mask = '/' | append: current_lang | append: '/' -%}
 
 {%- comment -%}
-  Output variables: current_lang, current_lang_mask
+  Output variables: current_lang, current_lang_mask, languages_array
 {%- endcomment -%}

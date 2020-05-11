@@ -1,24 +1,23 @@
-{%- include find_language.html url=page.url -%}
 <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
   <div class="container"><a class="navbar-brand logo" href="{{ '/' | relative_url }}">{{ site.title }}</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse"
           id="navcol-1">
           <ul class="nav navbar-nav ml-auto">
-            {%- for link in site.data[current_lang].navigation.main -%}
+            {%- for link in site.data[page.language].navigation.main -%}
               {%- if link.url contains "http" -%}
-                {%- assign url = link.url | replace: "current_lang", current_lang -%}
+                {%- assign url = link.url | replace: "current_lang", page.language -%}
               {%- else -%}
-                {%- assign url = link.url | replace: "current_lang", current_lang | relative_url -%}
+                {%- assign url = link.url | replace: "current_lang", page.language | relative_url -%}
               {%- endif -%}
-              <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url }}">{{ link.title | raw }}</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url }}" hrefcode="{{ page.language }}">{{ link.title | raw }}</a></li>
             {%- endfor -%}
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ site.data[current_lang].navigation.additional.lang.title | raw }}
+                {{ site.data[page.language].navigation.additional.lang.title | raw }}
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                {%- for link in site.data[current_lang].navigation.languages -%}
-                  <a class="dropdown-item" href="{{ page.url | replace_first: current_lang, link.code | relative_url }}">
+                {%- for link in site.data[page.language].navigation.languages -%}
+                  <a class="dropdown-item" href="{{ page.url | replace_first: page.language, link.code | relative_url }}" hreflang="{{ link.code }}">
                     <img src="{{ '/assets/images/languages/' | append: link.icon | append: '.svg' | relative_url }}" height="16" title="{{ link.title }}">
                     {{ link.title | raw }}
                   </a>
