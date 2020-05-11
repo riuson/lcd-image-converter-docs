@@ -2,9 +2,9 @@
 # pages in order as they should show up.
 main:
   - title: "<span class='fa fa-info'></span>&nbsp;About"
-    url: "/pages/current_lang/about/"
+    url: "/current_lang/about/"
   - title: "<span class='fa fa-book'></span>&nbsp;Docs"
-    url: "/docs/current_lang/short-manual"
+    url: "/current_lang/docs/short-manual"
   - title: "<span class='fa fa-download'></span>&nbsp;Downloads"
     url: https://sourceforge.net/projects/lcd-image-converter/
   - title: "<span class='fab fa-github'></span>&nbsp;GitHub"

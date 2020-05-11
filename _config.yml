@@ -34,10 +34,11 @@ plugins:
   - jekyll-redirect-from
 
 collections:
-  docs:
+  en:
     output: true
-  pages:
+  ru:
     output: true
+collections_dir: content
 
 permalink: /:year/:month/:day/:title/
 
@@ -55,19 +56,32 @@ permalink: /:year/:month/:day/:title/
 
 defaults:
   - scope:
-      path: ""
-      type: "docs"
+      path: "content/_en/*"
+    values:
+      layout: "pages"
+      order: 1
+  - scope:
+      path: "content/_ru/*"
+    values:
+      layout: "pages"
+      order: 1
+  - scope:
+      path: "content/_en/docs/*"
     values:
       layout: "docs"
       order: 1
   - scope:
-      path: ""
-      type: "pages"
+      path: "content/_ru/docs/*"
     values:
-      layout: "pages"
+      layout: "docs"
       order: 1
 
 languages: "en, ru"
 
 url: https://lcd-image-converter.riuson.com
 baseurl: /
+
+exclude:
+  - '*.code-workspace'
+  - '*.bsdesign'
+  - 'Gemfile*'

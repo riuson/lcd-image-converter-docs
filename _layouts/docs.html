@@ -7,7 +7,8 @@ layout: default
     {{ content }}
   </div>
   <div class="col-sm-12 col-md-12 col-lg-3 col-xl-2">
-    {%- assign filter="/docs" | append: current_lang_mask -%}
-    {%- include toc.html filter=filter items=site.docs -%}
+    {%- assign filter=current_lang_mask | append: "docs/" -%}
+    {%- assign items=site[current_lang] -%}
+    {%- include toc.html filter=filter items=items -%}
   </div>
 </div>

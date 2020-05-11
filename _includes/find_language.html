@@ -4,14 +4,18 @@
 {%- endcomment -%}
 
 {%- assign languages = site.languages | split: ", " -%}
-{%- assign current_lang = "" -%}
+{%- assign current_lang = languages | first -%}
+{%- assign url_parts = include.url | split: "/" -%}
+{%- assign url_lang = url_parts[1] -%}
+
 {%- for lang in languages -%}
-  {%- assign test_lang = "/" | append: lang | append: "/" -%}
-  {%- if include.url contains test_lang -%}
+  {%- if url_lang == lang -%}
     {%- assign current_lang = lang -%}
-    {%- assign current_lang_mask = test_lang -%}
-    {%- endif -%}
+    {%- break -%}
+  {%- endif -%}
 {%- endfor -%}
+
+{%- assign current_lang_mask = '/' | append: current_lang | append: '/' -%}
 
 {%- comment -%}
   Output variables: current_lang, current_lang_mask
