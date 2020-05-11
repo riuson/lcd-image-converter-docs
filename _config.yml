@@ -81,6 +81,8 @@ languages: "en, ru"
 url: https://lcd-image-converter.riuson.com
 baseurl: /
 
+cotributeurl: https://github.com/riuson/lcd-image-converter-docs/tree/gh-pages/content
+
 exclude:
   - '*.code-workspace'
   - '*.bsdesign'
