@@ -36,8 +36,8 @@ You can select own files in **Options -> Conversion -> Templates**, or use defau
  out_char_code_sim     | code of character's duplicate in hexadecimal representation (or empty string)
  out_char_text         | character in text form
  out_char_text_sim     | duplicate character in text form (or empty string)
- out_char_index        | index of character in font't array
- out_char_offset       | offset of character's data block in font't plain data array
+ out_char_index        | index of character in font's array
+ out_char_offset       | offset of character's data block in font's plain data array
  out_comma             | places ',', but nothing ('') at the end of list
  out_data_indent       | image data indent (tab or spaces from template file)
  out_image_data        | image's data array as text
