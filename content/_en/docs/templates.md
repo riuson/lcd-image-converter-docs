@@ -24,6 +24,7 @@ You can select own files in **Options -> Conversion -> Templates**, or use defau
  fnt_style             | font style
  fnt_use_bom           | append (yes) on not append (no) Byte Order Mark to character's code
  fnt_width_type        | font width type (proportional or monospaced)
+ fnt_compacted         | enabled (yes) or disabled (no) font's compacting
 |                      |
  img_byte_order        | bytes order
  img_data_block_size   | data blocks size in bits
@@ -38,12 +39,16 @@ You can select own files in **Options -> Conversion -> Templates**, or use defau
  out_char_text_sim     | duplicate character in text form (or empty string)
  out_char_index        | index of character in font's array
  out_char_offset       | offset of character's data block in font's plain data array
+ out_char_image_left   | left offset of character's image inside character's rectangle
+ out_char_image_top    | top offset of character's image inside character's rectangle
+ out_char_image_width  | width of character's image
+ out_char_image_height | height of character's image
  out_comma             | places ',', but nothing ('') at the end of list
  out_data_indent       | image data indent (tab or spaces from template file)
  out_image_data        | image's data array as text
  out_image_preview     | text preview of image
- out_image_height      | image height
- out_image_width       | image width
+ out_image_height      | image/character height
+ out_image_width       | image/character width
  out_images_count      | number of images (characters) in data file
  out_images_max_height | images max height
  out_images_max_width  | images max width
