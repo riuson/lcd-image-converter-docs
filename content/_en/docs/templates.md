@@ -35,6 +35,8 @@ You can select own files in **Options -> Conversion -> Templates**, or use defau
  out_bpp               | bits per pixel
  out_char_code         | code of character in hexadecimal representation
  out_char_code_sim     | code of character's duplicate in hexadecimal representation (or empty string)
+ out_char_code_min     | min code of character in hexadecimal representation
+ out_char_code_max     | max code of character in hexadecimal representation
  out_char_text         | character in text form
  out_char_text_sim     | duplicate character in text form (or empty string)
  out_char_index        | index of character in font's array
